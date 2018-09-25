@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+yarn
+yarn run concurrently --kill-others "yarn run parcel watch --target node src/index.ts" "yarn run chokidar dist/index.js -c 'node dist/index.js dev'"
