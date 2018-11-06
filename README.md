@@ -1,6 +1,6 @@
 # GraphQL Sourcegraph Extension
 
-A [Sourcegraph extension](https://github.com/sourcegraph/sourcegraph-extension-api) for GraphQL code intelligence.
+A [Sourcegraph extension](https://docs.sourcegraph.com/extensions) for GraphQL code intelligence.
 
 [**➕ Add to Sourcegraph**](https://sourcegraph.com/extensions/chris/graphql)
 
