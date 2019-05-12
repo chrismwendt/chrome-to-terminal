@@ -34,7 +34,7 @@ async function main() {
                 .split('/')
                 .slice(0, 3)
                 .join('/')
-            const fsPath = process.env.HOME + '/git/github.com' + ownerAndRepo
+            const fsPath = process.env.HOME + '/github.com' + ownerAndRepo
             const file =
                 url.path.split('/').slice(5).length > 0
                     ? url.path
@@ -47,9 +47,7 @@ tell application "iTerm"
   tell current window
     create tab with default profile
     tell current session
-      write text "mkdir -p ${fsPath} ; cd ${fsPath} ; git clone https://github.com/${ownerAndRepo} . ; code .${
-                file ? ' ; code ' + file : ''
-            }"
+      write text "mkdir -p ${fsPath} ; cd ${fsPath} ; git clone https://github.com/${ownerAndRepo} ."
     end tell
   end tell
 end tell
@@ -61,9 +59,7 @@ end tell
 }
 
 if (process.argv[2] === 'dev') {
-    fs.writeFileSync('/Users/chrismwendt/foo.txt', 'hi')
     dev()
 } else {
-    fs.writeFileSync('/Users/chrismwendt/foo.txt', 'there')
     main()
 }
